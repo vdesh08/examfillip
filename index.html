@@ -1,1 +1,119 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy HTML Testing Ground</title>
+    <style>
+        /* Modern Reset & Font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Fancy Gradient Background */
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Glassmorphism Card Container */
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #4a5568;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #718096;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        /* Interactive Elements */
+        .test-box {
+            background: #f7fafc;
+            border: 2px dashed #cbd5e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
+        }
+
+        .btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Quick JavaScript Output Style */
+        #output {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #38a169;
+            min-height: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>✨ Testing Environment</h1>
+        <p>A simple, stylish sandbox for your HTML, CSS, and JS experiments.</p>
+        
+        <div class="test-box">
+            <p>Use this area to test layouts, text formatting, or script triggers.</p>
+            <div id="output"></div>
+        </div>
+
+        <button class="btn" onclick="runTest()">Click to Test JS</button>
+    </div>
+
+    <script>
+        // Quick JS function to verify scripts are running
+        function runTest() {
+            const output = document.getElementById('output');
+            output.innerText = "🚀 Connection successful! JavaScript is working.";
+            
+            // Optional: Reset message after 3 seconds
+            setTimeout(() => {
+                output.innerText = "";
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
